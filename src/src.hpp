@@ -19,7 +19,7 @@ int MPI_Finalize();
 
 // Method to edit in tutorial
 int tutorial_main(int argc, char* argv[]);
-void transposeMPI(double* A, double* AT, int local_n, int global_n);
+void transpose_mpi(double* A, double* AT, int local_n, int global_n);
 void transpose_mpiOpenMP(double* A, double* AT, int local_n, int global_n);
 
 

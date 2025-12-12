@@ -3,7 +3,7 @@
 #include <time.h>
 #include <vector>
 
-void transposeMPI(double* A, double* AT, int local_n, int global_n)
+void transpose_mpi(double* A, double* AT, int local_n, int global_n)
 {
     int rank, num_procs;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
