@@ -56,7 +56,7 @@ add_subdirectory(${SOURCE_NAME})
 if (USE_C)
     add_library(tutorial STATIC
         ${src_SOURCES}
-        C/main.cpp 
+        C/main.c 
     )
     target_link_libraries(tutorial ${MPI_LIBRARIES}) 
 elseif (USE_PY)
@@ -74,6 +74,3 @@ enable_testing()
 add_subdirectory(${SOURCE_NAME}/tests)
 
 add_subdirectory(examples)
-
-
-

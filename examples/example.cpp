@@ -14,8 +14,7 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    int N = atoi(argv[1]);
-    tutorial_main(argc, argv, N);
+    tutorial_main(argc, argv);
 
     PMPI_Finalize();
     return 0;
