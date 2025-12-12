@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    transpose_MPI(A, AT, local_n, global_n);
+    transpose_mpi(A, AT, local_n, global_n);
 
     transpose_mpiOpenMP(A, AT_new, local_n, global_n);
 
