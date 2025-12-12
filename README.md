@@ -5,8 +5,7 @@ This tutorial aims at showing the difference in performance when using pure MPI 
 
 ## Project Structure:
 The project looks like this:  
-```` ``` ````
-.
+````.
 ├── C 
 │   ├── main.cpp 
 │   └── main_solutions.cpp
@@ -28,4 +27,4 @@ The project looks like this:
         ├── test_finalize.cpp
         ├── test_init.cpp
         └── unit_test.cpp
-```` ``` ````
+````
