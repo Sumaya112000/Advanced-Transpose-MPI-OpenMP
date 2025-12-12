@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <cmath>
 #include <vector>
-
+#include <time.h>
 int main(int argc, char* argv[])
 {
     PMPI_Init(&argc, &argv);
@@ -15,7 +15,6 @@ int main(int argc, char* argv[])
 
     int global_n = 1024;
     int local_n = global_n / num_procs;
-    int first_n = local_n * rank;
 
     double* A = new double[local_n * global_n];
     double* AT = new double[local_n * global_n];
@@ -30,10 +29,9 @@ int main(int argc, char* argv[])
         }
     }
 
-    transpose(A, AT, local_n, global_n);
+    transpose_MPI(A, AT, local_n, global_n);
 
-    transpose_datatype(A, AT_new, local_n, global_n);
-
+    transpose_mpiOpenMP(A, AT_new, local_n, global_n);
 
     for (int i = 0; i < local_n; i++)
     {
@@ -46,6 +44,7 @@ int main(int argc, char* argv[])
             }
         }
     }
+
     delete[] A;
     delete[] AT;
     delete[] AT_new;
@@ -53,9 +52,4 @@ int main(int argc, char* argv[])
     PMPI_Finalize();
     return 0;
 
-
-
-
-
 }
-
