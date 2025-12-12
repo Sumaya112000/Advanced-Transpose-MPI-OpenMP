@@ -4,10 +4,11 @@
 This tutorial aims at showing the difference in performance when using pure MPI and MPI + OpenMP for matrix tranpose. 
 
 ## Project Structure:
-The project looks like this:
+The project looks like this:  
+```` ``` ````
 .
-├── C \\
-│   ├── main.cpp \\
+├── C 
+│   ├── main.cpp 
 │   └── main_solutions.cpp
 ├── CMakeLists.txt
 ├── compile.sh
@@ -27,3 +28,4 @@ The project looks like this:
         ├── test_finalize.cpp
         ├── test_init.cpp
         └── unit_test.cpp
+```` ``` ````
