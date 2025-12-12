@@ -161,7 +161,7 @@ int tutprial_main(int argc, char** argv, int global_n)
 
         // Time MPI-only transpose
         double t1 = MPI_Wtime();
-        transpose_MPI(A, AT, local_n, N);
+        transpose_mpi(A, AT, local_n, N);
         double t2 = MPI_Wtime();
 
         // Time MPI+OpenMP transpose
